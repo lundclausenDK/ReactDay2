@@ -1,7 +1,7 @@
 import React from "react";
-import './App.css';
+import './index.css';
 
-class Resource extends React.Component {
+class Gallery extends React.Component {
 
 
     callKoalas() {
@@ -17,7 +17,7 @@ class Resource extends React.Component {
     render() {
         return (
             <div>
-                <h1>Hello, this is our new Resources class</h1>
+                <h1>Hello, this is our new Gallery class</h1>
 
                 {this.callKoalas()}
 
@@ -28,4 +28,4 @@ class Resource extends React.Component {
     }
 }
 
-export default Resource;
+export default Gallery;
