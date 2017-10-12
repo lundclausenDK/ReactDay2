@@ -5,30 +5,57 @@ class DataStore extends React.Component {
 
     constructor() {
         super();
-        this._books = [];
+        this.state = {books: []};
+
 
         this.loadBooks = this.loadBooks.bind(this);
         this.getAllBooks = this.loadBooks.bind(this);
+
+        this.loadBooks(function (data) {
+            this.setState({books: data});
+        }.bind(this));
     }
 
-    loadBooks() {
-        // fetch in here
+    loadBooks(callback) {
+        const url = "http://localhost:4000/books";
+        const conf = {method: "get"};
+        const promise = fetch(url, conf);
+
+
+        promise.then(function (response) {
+            return response.json();
+        }).then(function (data) {
+            console.log(data);
+
+            callback(data);
+        });
+
     }
 
-    getAllBooks() {
-        // return full collection
-    }
+    createBook(book, callback) {
+        fetch(URL, {
+                method: "POST",
+                headers: new Headers({"content-Type": "application/json"}),
+                body: JSON.stringify(book)
+            }
+        ).then(function (data) {
+            return data.json();
+        }).then(function (data) {
+            //callback(data);
+            this.loadBooks(callback(data));
+        });
 
-    Books(props) {
-        return <p>{props.name}</p>
+
     }
 
     render() {
-        return(
-            <div>
-                This is meeee
-                <Books name="Willy Wonka" />
-            </div>
+
+        const books = this.state.books.map(function (book) {
+            return <div key={book.id}>{book.author}</div>
+        });
+
+        return (
+            <div>{books}</div>
         );
     }
 
