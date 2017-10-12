@@ -1,10 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import Resource from "./Resource";
+
+//import Gallery from "./Gallery";
+//import Converter from "./Converter";
+import DataStore from "./DataStore";
 import registerServiceWorker from './registerServiceWorker';
 
-//ReactDOM.render(<App />, document.getElementById('root'));
-ReactDOM.render(<Resource />, document.getElementById('root'));
+//ReactDOM.render(<Gallery />, document.getElementById('root'));
+//ReactDOM.render(<Converter />, document.getElementById('root'));
+ReactDOM.render(<DataStore />, document.getElementById('root'));
+
 registerServiceWorker();
