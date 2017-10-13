@@ -13,4 +13,8 @@ body {
 
 .converter-container {width: 250px; text-align: right;}
 
+.list-group a {display: block; margin-bottom: 10px; }
+
 input {margin-bottom: 20px; padding: 5px;}
+
+.sl-custom-container {text-align: center; padding-top: 10px;}
