@@ -1,7 +1,7 @@
 import React from 'react';
 import {render} from 'react-dom';
 import axios from 'axios';
-import "./index.css";
+import "../index.css";
 
 const Title = ({todoCount}) => {
     return (
