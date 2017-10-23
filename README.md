@@ -1,4 +1,4 @@
-Exercies solutions
+Exercises solutions
 
 - Day02: Check the new Gallery class for Day 02 exercse.
 
