@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter } from "react-router-dom";
+import { HashRouter  } from "react-router-dom";
 
 //import registerServiceWorker from './archive/registerServiceWorker';
 //import Gallery from "./Gallery";
@@ -17,9 +17,9 @@ import MyRouter from "./MyRouter";
 //ReactDOM.render(<ShoppingListCustom />, document.getElementById("root"));
 ReactDOM.render((
 
-    <BrowserRouter>
+    <HashRouter >
         <MyRouter/>
-    </BrowserRouter>
+    </HashRouter >
 
 ), document.getElementById("root"));
 

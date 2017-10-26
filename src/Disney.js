@@ -1,8 +1,9 @@
 import React from "react";
 
 const Disney = () => (
-    <div>
+    <div className="container">
         <h1>Disney</h1>
+        <img src="img/disney.png" />
     </div>
 );
 

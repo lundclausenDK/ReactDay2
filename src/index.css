@@ -23,3 +23,5 @@ input {margin-bottom: 20px; padding: 5px;}
 .navigation li {display: inline-block; padding: 20px 40px; background: dodgerblue; border-right:  solid 1px white;}
 .navigation li:hover {background: midnightblue;}
 .navigation li a {text-decoration: none; color: white;}
+
+.container {text-align: center;}
